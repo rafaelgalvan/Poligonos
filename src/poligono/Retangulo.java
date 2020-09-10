@@ -7,24 +7,22 @@ package poligono;
 
 public class Retangulo extends Poligono {
 
-    private double base;
-    private double altura;
+    private float base;
+    private float altura;
     
     /**
-     *
-     * @param q = number of sides
      * @param b = base value
      * @param a = height value
      */
-    public Retangulo(int q, double b, double a)
+    public Retangulo(float b, float a)
     {
-        super(q);
+        super(4);
         this.base = b;
         this.altura = a;
     }
     
     @Override
-    public double calcularArea()
+    public float calcularArea()
     {
         return (base * altura);
     }
@@ -36,25 +34,25 @@ public class Retangulo extends Poligono {
         super.imprimir();
         System.out.println("Base: " + this.base);
         System.out.println("Altura: " + this.altura);
-        System.out.println("Área: " + this.calcularArea());
+        System.out.println("Área: " + this.calcularArea() + "\n");
     }
     
-    public double getBase()
+    public float getBase()
     {
         return base;
     }
 
-    public void setBase(double base)
+    public void setBase(float base)
     {
         this.base = base;
     }
 
-    public double getAltura()
+    public float getAltura()
     {
         return altura;
     }
 
-    public void setAltura(double altura)
+    public void setAltura(float altura)
     {
         this.altura = altura;
     }

@@ -16,7 +16,7 @@ public abstract class Poligono {
     
     public Poligono(int qtd_lados)
     {
-        this.qtd_lados = qtd_lados;
+        this.setQtd_lados(qtd_lados);
     }
     
     public void imprimir()
@@ -24,15 +24,19 @@ public abstract class Poligono {
         System.out.println("Quantidade de lados: " + this.qtd_lados);
     }
     
-    public abstract double calcularArea();
+    public abstract float calcularArea();
     
     public int getQtd_lados()
     {
         return qtd_lados;
     }
 
-    public void setQtd_lados(int qtd_lados)
+    public final void setQtd_lados(int qtd_lados)
     {
+        if (qtd_lados < 3) {
+            System.out.println("Quantidade de lados inválida.");
+        } else {
             this.qtd_lados = qtd_lados;
+        }
     }
 }

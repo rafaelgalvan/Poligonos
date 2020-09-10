@@ -7,25 +7,24 @@ package poligono;
 
 public class Triangulo extends Poligono {
 
-    private double base;
-    private double altura;
+    private float base;
+    private float altura;
     
     /**
      *
-     * @param q = number of sides
      * @param b = base value
      * @param a = height value
      */
     
-    public Triangulo(int q, double b, double a)
+    public Triangulo(float b, float a)
     {
-        super(q);
+        super(3);
         this.base = b;
         this.altura = a;
     }
     
     @Override
-    public double calcularArea()
+    public float calcularArea()
     {
         return ((base * altura) / 2);
     }
@@ -37,7 +36,7 @@ public class Triangulo extends Poligono {
         super.imprimir();
         System.out.println("Base: " + this.base);
         System.out.println("Altura: " + this.altura);
-        System.out.println("Área: " + this.calcularArea());
+        System.out.println("Área: " + this.calcularArea() + "\n");
     }
 
     public double getBase()
@@ -45,7 +44,7 @@ public class Triangulo extends Poligono {
         return base;
     }
 
-    public void setBase(double base)
+    public void setBase(float base)
     {
         this.base = base;
     }
@@ -55,7 +54,7 @@ public class Triangulo extends Poligono {
         return altura;
     }
 
-    public void setAltura(double altura)
+    public void setAltura(float altura)
     {
         this.altura = altura;
     }
